@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loader.setAttribute ('style', 'opacity: 0;');
   }, 500)
-  setTimeout((0 => {
+  setTimeout(() => {
     loader.parentNode.removeChild(loader);
     document.body.style.overflow = 'initial';
   }, 1000);
