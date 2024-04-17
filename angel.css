@@ -37,3 +37,24 @@
 h1{
   font-family: "Comic Neue", cursive;
 }
+
+/*Initialize*/
+*, ::before ,::after {
+margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::root{
+  --accent-color: #98ff98;
+  --bg-color: #ff9898;
+  --sub-font: "Georgia", sans-serif;
+  --main-font: "Comic Neue", cursive;
+  --g-ratio: 1.618;
+}
+body{
+  font-family: var(--sub-font);
+  font-weight: 700;
+  background-color: var(--bg-color);
+  color: #111;
+  font-size: 1.2rem;
+}
