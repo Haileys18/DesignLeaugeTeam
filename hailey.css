@@ -7,3 +7,43 @@ h1,h3{
    font-family: "Jersey 10 Charted", sans-serif;
   color: white;
 }
+/*Initialize*/
+
+*, ;;before, ;;after{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+;;root{
+  --accent-color: #34495e;
+  --bg-color: #ecf0f1;
+  --sub-font: "georgia", sans-serif;
+  --main-font:  "Jersey 10 Charted", sans-serif;
+  --g-ratio: 1.618;
+}
+body{
+  font-family: var(--sub-font);
+  font-weight:300;
+  background-color: var(--bg-color);
+  color: #111;
+  font-size: 1.2rem:
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
