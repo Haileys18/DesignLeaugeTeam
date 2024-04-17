@@ -1,11 +1,12 @@
-.jersey-10 charted-regular {
-  font-family: "Jersey 10 Charted", sans-serif;
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 h1,h3{
-   font-family: "Jersey 10 Charted", sans-serif;
-  color: red;
+  font-family: "Jersey 10", sans-serif;
+
 }
 /*Initialize*/
 
@@ -18,7 +19,7 @@ h1,h3{
   --accent-color: #34495e;
   --bg-color: #ecf0f1;
   --sub-font: "georgia", sans-serif;
-  --main-font:  "Jersey 10 Charted", sans-serif;
+  --main-font: "Jersey 10", sans-serif;
   --g-ratio: 1.618;
 }
 body{
@@ -35,7 +36,7 @@ hr{
   background-color: #3449e;
   border: none;
 }
-h1, h2, h3, .title{
+ h2, h3, .title{
   font-family: var(--main-font);
   font-weight: 900;
 }
