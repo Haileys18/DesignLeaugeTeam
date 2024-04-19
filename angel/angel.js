@@ -45,5 +45,11 @@ function Ninjas(name, game, height, color){
     button.style.setProperty('color', 'var(--bg-color)');
 
     //coin effect
+    const coinImg = document.createElement('img');
+    coinImg.setAttribute('src', 'img/coin.png');
+    coinImg.setAttribute('id', 'coin-img');
+    coinImg.style.transform = 'translate(-50%, calc(-100% - ' + ninja.height + 'px)';
+    container.appendChild(coinImg);
+    //continue from js2.png (from the $)
   }
 }
