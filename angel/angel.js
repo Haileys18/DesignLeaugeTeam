@@ -9,3 +9,7 @@ window.addEventListener('load', () => {
     document.body.style.overflow = 'initial';
   }, 1000);
 });
+
+const coinSfx = new Sfx('angel/sfx/Mario Coin.wav');
+const pipeSfx = new Sfx('angel/sfx/Mario Pipe.wav');
+const powerUpSfx = new Sfx('angel/sfx/Mario Powerup.wav');
