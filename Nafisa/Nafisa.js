@@ -88,3 +88,14 @@ const promptUser = () => {
     }else {
       this.getHeight();
     };
+
+    this.getColor = () => {
+      color = prompt('Choose color: Red Blue Green') || 'red';
+      color = color.toLowerCase();
+      if (color === 'red' || color === 'blue' || coloe ==='green') {
+        return;
+      } else{
+        this.getColor();
+      };
+
+      this.append
