@@ -21,7 +21,7 @@ h3{
 .content{
     position: absolute;
     width: 95%;
-    border: 2px darkgreen;
+    border: 2px darkgreen solid;
     border-radius: 10px;
 }
 
@@ -30,12 +30,38 @@ h3{
     left: 5px;
     height: 50%;
     width: 30%;
-    border: 1px darkgreen;
+    border: 1px darkgreen dotted;
 }
 
 .game{
     position: absolute;
     right: 5px;
     width: 30%;
-    border: 1px darkgreen;
+    border: 1px darkgreen dotted;
+}
+a:link {
+  color: black;
+  background-color: white;
+  border: 2px #5F8575 dotted;
+}
+
+a:visited {
+  color: #00A36C;
+  background-color: whitesmoke;
+  text-decoration: bold;
+    border: 2px #C1E1C1 dotted;
+}
+
+a:hover {
+  color: white;
+  background-color: #9FE2BF;
+  text-decoration: underline;
+    border: 2px #008080 dotted;
+}
+
+a:active {
+  color: #5F9EA0;
+  background-color: transparent;
+  text-decoration: underline;
+    border: 2px black dotted;
 }
