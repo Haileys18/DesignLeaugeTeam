@@ -28,13 +28,13 @@ h3{
 .slides{
     position: absolute;
     left: 5px;
-    width: 50%;
+    width: 30%;
     border: 1px darkgreen;
 }
 
 .game{
     position: absolute;
     right: 5px;
-    width: 50%;
+    width: 30%;
     border: 1px darkgreen;
 }
