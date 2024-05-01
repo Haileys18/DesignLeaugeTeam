@@ -28,6 +28,7 @@ h3{
 .slides{
     position: absolute;
     left: 5px;
+    height: 50%;
     width: 30%;
     border: 1px darkgreen;
 }
