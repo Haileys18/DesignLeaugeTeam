@@ -10,12 +10,12 @@ h1,h3{
 }
 /*Initialize*/
 
-*, ;;before, ;;after{
+*, ::before, ::after{
   margin: 0;
   padding:0;
   box-sizing: border-box;
 }
-;;root{
+:root{
   --accent-color: #34495e;
   --bg-color: #ecf0f1;
   --sub-font: "georgia", sans-serif;
@@ -78,7 +78,10 @@ border: 2px solid#CCC;
 }
 .btns-container {
 width: 50%;
-display: flex; justify-content: flex-end; align-items: flex-end; position: relative;
+display: flex; 
+  justify-content: flex-end; 
+  align-items: flex-end; 
+  position: relative;
 ｝
 
 button {
@@ -100,7 +103,8 @@ left: 50%:
 transform: translate(-50%, -100%);
 ｝
 .floor {
-width: 100%; height: 30%;
+width: 100%;
+height: 30%;
 position: absolute;
 bottom: 0;
 background-color: #bbb;
