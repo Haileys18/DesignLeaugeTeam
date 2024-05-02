@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript Basic</title>
+
+
+</head>
+<body>
+
+<h1>JavaScript Output Below</h1>
+<p id="demo"> This will change with Javascript</p>
+<button type="button" onclick="addition()">Add 6+5</button>
+
+
+<button type="button" onclick="subtract()">Subtract 6-5</button>
+
+
+<button type="button" onclick="multiply()">Multiply 90x5</button>
+
+
+<button type="button" onclick="division()">Divide 80^5</button>
+
+<button type="button" onclick="helloWorld()">Greet</button>
+<div onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
+<style>
+div{
+background-color:red;
+ width: 100px;
+ height:100px;
+} 
+</style>
+<script>
+function addition(){
+document.getElementById("demo").innerHTML=6+5
+}
+function subtract(){
+document.getElementById("demo").innerHTML=6-5
+}
+function multiply(){
+document.getElementById("demo").innerHTML=90*5
+}
+function division(){
+document.getElementById("demo").innerHTML=80/5
+}
+function helloWorld(){
+document.getElementById("demo").innerHTML="Hello World!"
+}
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor = "Coordinates: (" +x+ " ," +y+ ")"
+document.getElementById("demo").innerHTML= coor
+}
+function clearCoor(){
+document.getElementById("demo").innerHTML="   "
+}
+</script>
+
+</body>
+</html>
