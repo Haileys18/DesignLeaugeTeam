@@ -20,6 +20,7 @@ h3{
 
 .content{
     position: absolute;
+    height: 75%;
     width: 95%;
     border: 2px darkgreen solid;
     border-radius: 10px;
@@ -36,6 +37,7 @@ h3{
 .game{
     position: absolute;
     right: 5px;
+    height: 50%;
     width: 30%;
     border: 1px darkgreen dotted;
 }
