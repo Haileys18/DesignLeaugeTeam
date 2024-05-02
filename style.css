@@ -18,7 +18,10 @@ h3{
     color: forestgreen;
 }
 
-.content{
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     position: absolute;
     height: 75%;
     width: 95%;
