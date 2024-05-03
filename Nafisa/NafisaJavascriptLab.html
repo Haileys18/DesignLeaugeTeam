@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#animate{
+background-color: yellow;
+width:50px;
+height: 50px;
+position: absolute;
+}
+
+#container{
+background-color: green;
+width: 300px;
+height: 300px;
+position: relative;
+}
+</style>
+<title> JavaScript Basic </title>
+</head>
+<body>
+
+<h1 style="font-family: Courier New; color:Purple;">JavaScript Output Below</h1>
+<p id = "demo" style="font-family: Courier New; color:Purple;">This will change with javascript</p>
+<button type="button" onclick="addition()" style="background-color:red; color:white; font-family: Lucide Console">
+Add 6+5 </button>
+
+<button type="button" onclick="subtraction()" style="background-color:pink; color:white; font-family: Lucide Console">
+Subtract 6-5 </button>
+
+<button type="button" onclick="multiplication()" style="background-color:purple; color: white; font-family: Lucide Console">
+Multiply 6*5</button>
+
+<button type="button" onclick="division()" style="background-color:blue; color: white; font-family: Lucide Console">
+Divide 6/5 </button>
+
+<button type = "button" onclick="helloWorld()" style="background-color:green; color: white; font-family: Lucide Console">Greet</button>
+
+
+<div style = "background-color:#CE796B; width:100px; height:100px" onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
+
+
+
+<button type="button" onclick="moveIt()">moveIt</button>
+
+<button type="button" onclick="moveitAgain()">moveitAgain</button>
+
+
+<div id="container">
+<div id = "animate">
+</div>
+</div>
+
+<script>
+function addition(){
+document.getElementById("demo").innerHTML = 6+5
+}
+
+function subtraction(){
+document.getElementById("demo").innerHTML = 6-5
+}
+
+function multiplication(){
+document.getElementById("demo").innerHTML = 6*5
+}
+
+function division(){
+document.getElementById("demo").innerHTML = 6/5
+}
+
+function helloWorld(){
+document.getElementById("demo").innerHTML = "Hello World!"
+}
+
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor = "Coordinates: (" +x+","+y+")"
+document.getElementById("demo").innerHTML = coor
+}
+
+function clearCoor(){
+document.getElementById("demo").innerHTML = "  "
+}
+
+function moveIt(){
+let id= null
+const elem = document.getElementById("animate")
+let pos = 0
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+if (pos==250){
+clearInterval(id)
+}
+else{
+pos++
+elem.style.top = pos + "px"
+elem.style.left = pos + "px"
+}
+}
+}
+
+function moveitAgain(){
+let id= null
+const elem = document.getElementById("animate")
+let pos = 250
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+if (pos==0){
+clearInterval(id)
+}
+else{
+pos--
+elem.style.bottom = pos + "px"
+elem.style.right = pos + "px"
+}
+}
+}
+
+
+</script>
+</body>
+</html>
