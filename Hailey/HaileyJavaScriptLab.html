@@ -2,7 +2,9 @@
 <html>
 <head>
 <title> JavaScript Basic</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -22,11 +24,42 @@
 
 <button type="button" onclick="helloWorld()">Greet</button>
 <div onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
-<style>
+
+ <button type="button" onclick="moveIt()">Move It</button>
+<button type="button" onclick="moveBack()">Move Back</button>
+<div id="container">
+<div id="animate"></div>
+</div>
+ 
+ 
+ 
+ 
+ <style>
 div{
 background-color:red;
  width: 100px;
  height:100px;
+
+ body{
+background-color: #B6DBE4
+}
+
+#animate{
+background-color:yellow;
+width:50px;
+height:50px;
+position:absolute;
+}
+
+#container{
+background-color:green;
+width:300px;
+height:300px;
+position:relative;
+}
+
+button{
+background-color:white;}
 } 
 </style>
 <script>
@@ -53,6 +86,37 @@ document.getElementById("demo").innerHTML= coor
 }
 function clearCoor(){
 document.getElementById("demo").innerHTML="   "
+}
+ function moveIt(){
+let id = null
+const elem = document.getElementById("animate")
+let pos = 0
+clearInterval(id)
+id = setInterval (frame,5)
+function frame(){
+if (pos == 250){
+clearInterval(id)
+} else{
+pos++
+elem.style.top = pos + "px"
+elem.style.left = pos + "px"
+}
+  }
+}
+function moveBack(){
+let id = null
+const elem = document.getElementById("animate")
+let pos = 250
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+if (pos == 0){
+clearInterval(id)}
+else{
+pos--
+elem.style.top = pos+"px"
+elem.style.left = pos+"px"
+}}
 }
 </script>
 
