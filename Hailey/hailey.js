@@ -97,18 +97,18 @@ img = document.createElement ('img');
 let size = 'width:' + height + 'px;height:' + height + 'px;';
 if
 (color === 'blue') {
-img setAttribute( 'src', 'imgs/ninjal.png');
+img setAttribute( 'src', 'img/ninjal.png');
 img. setAttribute('style', size); 
   container.appendChild (img);
 ｝
 else if
 (color === 'green') {
-img setAttribute('src', 'imgs/ninja2.png');
+img setAttribute('src', 'img/ninja2.png');
 img.setAttribute('style', size);
 container.appendChild (img);
 ｝else if
 (color === 'red') {
-img.setAttribute('src', 'imgs/ninja3.png');
+img.setAttribute('src', 'img/ninja3.png');
 img setAttribute('style', size); 
   container.appendChild(img);
 }
