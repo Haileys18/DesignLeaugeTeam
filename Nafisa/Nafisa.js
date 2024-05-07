@@ -1,15 +1,3 @@
-//Loader
-window.addEventListener('load', () => {
-  const loader = document.querySelector('.loader');
-  setTimeout(() => {
-    loader.setAttribute('style', 'opacity: 0;');
-  }, 500);
-  setTimeout(() => {
-    loader.parentNode.removeChild(loader);
-    document.body.style.overflow = 'initial';
-  }, 1000);
-});
-
 const coinSfx = new Sfx('sfx/Mario Coin.wav');
 const pipeSfx = new Sfx('sfx/Mario Pipe.wav');
 const powerUpSfx = new Sfx('sfx/Mario Powerup.wav');
@@ -23,10 +11,9 @@ function Sfx(src) {
   this.sound.setAttribute('controls', 'none');
   this.sound.style.display = 'none';
   document.body.appendChild(this.sound);
-  this.play
-    = function() {
-      this.sound.play();
-    };
+  this.play = function() {
+    this.sound.play();
+  };
 }
 
 function Ninjas(name, age, height, color) {
@@ -43,31 +30,29 @@ function Ninjas(name, age, height, color) {
 
     button.style.setProperty('background-color', '#2ecc71');
     button.style.setProperty('border-color', '#2ecc71');
-    button.style.setProperty('color', 'var (--bg-color)');
+    button.style.setProperty('color', 'var(--bg-color)');
 
     //coin effect
     const coinImg = document.createElement('img');
-    coinImg.setAttribute('src', 'imgs/coin.png');
+    coinImg.setAttribute('src', 'img/coin.png');
     coinImg.setAttribute('id', 'coin-img');
-    coinImg.style.transform = 'translate(-50%, calc(-100% - ' + ninja.height + 'px)';
+    coinImg.style.transform = 'translate(-50%,calc(-100% - ' + ninja.height + 'px)';
     container.appendChild(coinImg);
 
     $('#coin-img').animate({ top: '60%', opacity: 1 }, 250);
     $('#coin-img').animate({ top: '70%', opacity: 0 }, 250, () => {
       $('#coin-img').remove();
       button.style.setProperty('background-color', 'transparent');
-      button.style.setProperty('border- color', 'var(--accent-color)');
-      button.style.setProperty('color', 'var (--accent-color');
+      button.style.setProperty('border-color', 'var(--accent-color)');
+      button.style.setProperty('color', 'var(--accent-color');
     });
   };
-  this.pipe
-    = () => {
-      pipeSfx.play();
-    };
-  this.powerUp
-    = () => {
-      powerUpSfx.play();
-    };
+  this.pipe = () => {
+    pipeSfx.play();
+  };
+  this.powerUp = () => {
+    powerUpSfx.play();
+  };
 }
 
 const promptUser = () => {
@@ -106,58 +91,60 @@ const promptUser = () => {
       this.getColor();
     }
   };
- 
+
   this.appendImg = () => {
     img = document.createElement('img');
-    let size = 'width:' + height + 'px; height:' + height + 'px;';
+    let size = 'width:' + height + 'px;height:' + height + 'px;';
     if (color === 'blue') {
-      img.setAttribute('src', 'imgs/ninja1.png');
+      img.setAttribute('src', 'img/ninja1.png');
       img.setAttribute('style', size);
       container.appendChild(img);
     } else if (color === 'green') {
-      img.setAttribute('src', 'imgs/ninja2.png');
+      img.setAttribute('src', 'img/ninja2.png');
       img.setAttribute('style', size);
       container.appendChild(img);
     } else if (color === 'red') {
-      img.setAttribute('src', 'imgs/ninja3.png');
+      img.setAttribute('src', 'img/ninja3.png');
       img.setAttribute('style', size);
       container.appendChild(img);
     }
   };
-}
 
-  const changeBtns = () => {
+  this.changeBtns = () => {
     const btn = document.querySelector('button');
-    const btnsContainer = document.querySelector('.btns-container');
-    btnsContainer.removeChild(btn);
-    btnsContainer.innerHTML =
+    const btnContainer = document.querySelector('.btns-container');
+    btnContainer.removeChild(btn);
+    btnContainer.innerHTML =
       "<button onclick='ninja.coin()' id='btnCoin'>Coin</button> \n <button onclick='ninja.pipe()' id='btnPipe'>Pipe</button> \n <button onclick='ninja.powerUp()' id='btnPowerUp'>Power Up</button>";
     const newBtns = document.querySelectorAll('button');
     for (let i = 0; i < newBtns.length; i++) {
       newBtns[i].style.setProperty('margin-left', '1.5rem');
     }
+
+    // Add floor
+    const floor = document.createElement('div');
+    floor.setAttribute('class', 'floor');
+    container.appendChild(floor);
+    floor.innerHTML =
+      'Name: ' +
+      ninja.name +
+      '\xa0\xa0\xa0Age: ' +
+      ninja.age +
+      '\xa0\xa0\xa0Height: ' +
+      ninja.height +
+      'px' +
+      '\xa0\xa0\xa0Color: ' +
+      ninja.color;
   };
 
-  const floor = document.createElement('div');
-  floor.setAttribute('class', 'floor');
-  container.appendChild(floor);
-  floor.innerHTML =
-    'Name: ' +
-    ninja.name +
-    '\xa0\xa0\xa0Age: ' +
-    ninja.age +
-    '\xa0\xa0Height: ' +
-    ninja.height +
-    'px' +
-    '\xa0\xa0\xa0Color: ' +
-    ninja.color;
+  this.getAge();
+  this.getHeight();
+  this.getColor();
+
+  ninja = new Ninjas(name, age, height, color);
+
+  this.appendImg();
+  this.changeBtns();
 };
-
-promptUser();
-
-ninja = new Ninjas(name, age, height, color);
-
-appendImg();
-changeBtns();
 
         
