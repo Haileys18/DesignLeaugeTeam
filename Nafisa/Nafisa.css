@@ -1,66 +1,78 @@
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+html{
+  width: 100%;
+  height: 100%;
+}
 
-.exo-2-<uniquifier> {
-  font-family: "Exo 2", sans-serif;
+
+.brygada-1918-<uniquifier> {
+  font-family: "Brygada 1918", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
 }
 
-h3{
-  font-family: "Exo 2", sans-serif;
-}
 
-/*Initialize*/
-*, ::before, ::after {
+/* Initialize
+====================== */
+
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
-::root{
-  --accent-color: #34495e;
-  --bg-color: #ecf0f1
-  --sub-font: "georgia", sans-serif;
-  --main-font: "Exo 2", sans-serif;
-  --g-ratio: 1.618;
+
+:root {
+    --accent-color:#34495e;
+    --bg-color: #ecf0f1;
+    --sub-font: "Georgia", sans-serif;
+    --main-font: "Brygada 1918", serif;
+    --g-ratio: 1.618;
+  }
 }
-body{
+
+body {
   font-family: var(--sub-font);
   font-weight: 300;
   background-color: var(--bg-color);
   color: #111;
   font-size: 1.2rem;
 }
-hr{
+
+hr {
   margin-top: 0.5rem;
   width: 70px;
   height: 5px;
   background-color: #34495e;
   border: none;
 }
-h1, h2, h3 .title{
+
+h1,
+h2,
+h3,
+.title {
   font-family: var(--main-font);
   font-weight: 900;
 }
 
-.tittle{
+.title {
   color: var(--accent-color);
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc(100vw/var(--g-ratio));
+  width: calc(100vw / var(--g-ratio));
   height: 100vh;
   min-width: 800px;
   margin: 0 auto;
   background-color: inherit;
 }
 
-.container{
+.container {
   width: 100%;
   height: 100%;
   padding: 5rem 0;
@@ -71,20 +83,21 @@ h1, h2, h3 .title{
   font-weight: initial;
 }
 
-/*Main Content*/
+/* Main Content
+====================== */
+
 .top-container {
   display: flex;
   width: 100%;
 }
 
-.lab-info{
-  width:50%;
+.lab-info {
+  width: 50%;
 }
 
-.content{
+.content {
   margin-top: 2rem;
-  width:100%;
-  min-height: 100%;
+  width: 100%;
   min-height: 500px;
   position: relative;
   border: 2px solid #ccc;
@@ -94,10 +107,11 @@ h1, h2, h3 .title{
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
 }
 
-button{
+button {
   background-color: transparent;
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
@@ -123,8 +137,8 @@ img {
   width: 100%;
   height: 30%;
   position: absolute;
-  bottom: 0%;
-  background-color: #bbb
+  bottom: 0;
+  background-color: #bbb;
   z-index: 10;
   font-family: 'Press Start 2P', cursive;
   display: flex;
@@ -135,7 +149,6 @@ img {
 #coin-img {
   position: absolute;
   left: 50%;
-  top: 70%
+  top: 70%;
   height: 60px;
 }
-
