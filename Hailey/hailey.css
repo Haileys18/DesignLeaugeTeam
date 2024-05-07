@@ -15,7 +15,7 @@ h1,h3{
   padding: 0;
   box-sizing:border-box;
 }
-::root{
+:root{
   --accent-color: #34495e;
   --bg-color: #ecf0f1;
   --sub-font: "georgia", sans-serif;
