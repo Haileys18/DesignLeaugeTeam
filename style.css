@@ -45,6 +45,7 @@ h3{
     height: 50%;
     width: 30%;
     border: 1px darkgreen dotted;
+    bottom: 2%;
 }
 a:link {
   color: black;
