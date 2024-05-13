@@ -28,7 +28,7 @@ jersey-10-regular {
     --main-font: "Jersey 10", sans-serif;
     --g-ratio: 1.618;
   }
-}
+
 
 body {
   font-family: var(--sub-font);
