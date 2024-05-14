@@ -31,21 +31,23 @@ h3{
 
 .slides{
     position: absolute;
-    bottom: 2%;
-    left: 5px;
-    height: 50%;
-    width: 30%;
-    border: 1px darkgreen dotted;
+  right: 1px;
+  margin: 2px;
+  padding: 2px;
+  width:49.5%;
+  height: 1200;
+    border: 2px darkgreen dotted;
     
 }
 
 .game{
-    position: absolute;
-    right: 5px;
-    height: 50%;
-    width: 30%;
-    border: 1px darkgreen dotted;
-    bottom: 2%;
+     position: absolute;
+  left: 1px;
+  margin: 2px;
+  padding: 2px;
+  border: 2px darkgreen dotted;
+  width:49.5%;
+  height: 600px;
 }
 a:link {
   color: black;
@@ -79,5 +81,5 @@ a:active {
             position: relative;
             left: 100px;
             height: 300px;
-            width: 3500px;
+            width: 350px;
 }
